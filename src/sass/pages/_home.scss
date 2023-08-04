@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-top: 357px;
+
+  .left-side {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right-side {
+    display: flex;
+    align-items: flex-start;
+ 
+
+
+    .big-circle {
+      width: 274px;
+      height: 274px;
+      border-radius: 50%;
+      background-color: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      span {
+        color: #0b0d17;
+        font-family: Bellefair;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

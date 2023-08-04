@@ -1,0 +1,78 @@
+$bg-dark: #0b0d17;
+$color-gray: #d0d6f9;
+$color-white: #fff;
+
+.heading-1 {
+  color: $color-white;
+  font-family: Bellefair;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.heading-2 {
+  color: $color-white;
+  font-family: Bellefair;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.heading-3 {
+  color: $color-white;
+  font-family: Bellefair;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.heading-4 {
+  color: $color-white;
+  font-family: Bellefair;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.heading-5 {
+  color: $color-gray;
+  font-family: Barlow Condensed;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.725px;
+}
+
+.supheading-1 {
+  color: $color-white;
+  font-family: Bellefair;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.subheading-2 {
+  color: $color-gray;
+  font-family: Barlow;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.body-text {
+  color: #fff;
+  font-family: Barlow;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; 
+}

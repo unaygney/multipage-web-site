@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+
+$font-family-heading: "Bellefair", serif;
+$font-family-nav: "Barlow Condensed", sans-serif;
+$font-family-text: "Barlow", sans-serif;
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-family-heading;
+}

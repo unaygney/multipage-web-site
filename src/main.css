@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+.heading-1 {
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; }
+
+.heading-2 {
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; }
+
+.heading-3 {
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase; }
+
+.heading-4 {
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase; }
+
+.heading-5 {
+  color: #d0d6f9;
+  font-family: Barlow Condensed;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.725px; }
+
+.supheading-1 {
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase; }
+
+.subheading-2 {
+  color: #d0d6f9;
+  font-family: Barlow;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; }
+
+.body-text {
+  color: #fff;
+  font-family: Barlow;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, textarea, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: 0; }
+
+:focus {
+  outline: 0; }
+
+.clear {
+  clear: both; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bellefair", serif; }
+
+.navbar {
+  margin-top: 40px;
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 55px;
+  position: relative; }
+  .navbar::before {
+    content: "";
+    width: 473px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: 217px;
+    top: 48px;
+    z-index: 2; }
+  .navbar .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.77423px);
+    height: 100%;
+    width: 830px; }
+    .navbar .links li:not(:last-child) {
+      margin-right: 50px; }
+    .navbar .links li a {
+      color: #fff;
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.7px;
+      text-transform: uppercase; }
+      .navbar .links li a .bold-text {
+        color: #fff;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.7px;
+        margin-right: 11px; }
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(./assets/home/background-home-desktop.jpg); }
+  .header.destination {
+    background-image: url(./assets/destination/background-destination-desktop.jpg); }
+  .header.crew {
+    background-image: url(./assets/crew/background-crew-desktop.jpg); }
+  .header.technology {
+    background-image: url(./assets/technology/background-technology-desktop.jpg); }
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-top: 357px; }
+  .container .left-side {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; }
+  .container .right-side {
+    display: flex;
+    align-items: flex-start; }
+    .container .right-side .big-circle {
+      width: 274px;
+      height: 274px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; }
+      .container .right-side .big-circle span {
+        color: #0b0d17;
+        font-family: Bellefair;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2px; }
