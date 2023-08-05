@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { MyContext  } from '../context/AppContext';
 
-function Header() {
 
-    const location = useLocation();
-    const [activePage , setActivePage] = useState('')
+function HeaderHome() {
 
-      useEffect(() => {
-        setActivePage(location.pathname);
-      }, [location]);
-
+  const {sharedData , activePage} = useContext(MyContext)
 
     return ( 
         <header className={`header ${activePage.replace('/', '')}`}>
             <div className="container">
-                <div className="left-side">
+            <div className="left-side">
                    <h5 className='heading-5'>SO, YOU WANT TO TRAVEL TO</h5>
                    <h1 className='heading-1'>SPACE</h1>
                    <p className='body-text'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
@@ -31,4 +26,4 @@ function Header() {
      );
 }
 
-export default Header;
+export default HeaderHome;

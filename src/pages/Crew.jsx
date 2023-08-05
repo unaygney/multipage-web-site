@@ -1,10 +1,10 @@
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
+import HeaderCrew from "../components/HeaderCrew";
 function Crew() {
     return ( 
         <div>
              <Navbar/>
-             <Header/>
+             <HeaderCrew/>
         </div>
      );
 }

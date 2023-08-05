@@ -62,7 +62,7 @@
   line-height: 32px; }
 
 .body-text {
-  color: #fff;
+  color: #D0D6F9;
   font-family: Barlow;
   font-size: 18px;
   font-style: normal;
@@ -183,7 +183,9 @@ h4 {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url(./assets/home/background-home-desktop.jpg); }
+  background-image: url(./assets/home/background-home-desktop.jpg);
+  display: flex;
+  justify-content: center; }
   .header.destination {
     background-image: url(./assets/destination/background-destination-desktop.jpg); }
   .header.crew {
@@ -193,9 +195,12 @@ h4 {
 
 .container {
   display: flex;
-  justify-content: space-evenly;
-  height: 100%;
-  margin-top: 357px; }
+  justify-content: space-between;
+  height: 70%;
+  width: 80%;
+  margin-top: auto;
+  align-items: center;
+  border: 1px solid white; }
   .container .left-side {
     width: 450px;
     display: flex;

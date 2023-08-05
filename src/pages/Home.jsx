@@ -1,11 +1,12 @@
-import Header from "../components/Header";
+import HeaderHome from "../components/HeaderHome";
 import Navbar from "../components/Navbar";
+
 
 function Home() {
     return ( 
         <div>
             <Navbar/>
-            <Header/>
+            <HeaderHome/>
         </div>
      );
 }

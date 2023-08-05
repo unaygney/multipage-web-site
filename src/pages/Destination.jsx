@@ -1,10 +1,11 @@
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
+import Header from "../components/HeaderHome";
+import HeaderDestination from "../components/HeaderDestination";
 function Destination() {
     return ( 
         <div>
               <Navbar/>
-              <Header/>
+              <HeaderDestination/>
         </div>
      );
 }

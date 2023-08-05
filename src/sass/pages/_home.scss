@@ -1,8 +1,12 @@
 .container {
   display: flex;
-  justify-content: space-evenly;
-  height: 100%;
-  margin-top: 357px;
+  justify-content: space-between;
+  height: 70%;
+  width: 80%;
+  margin-top: auto;
+ align-items: center;
+ border: 1px solid white;
+  
 
   .left-side {
     width: 450px;

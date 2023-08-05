@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
+import Header from "../components/HeaderHome";
 function Technology() {
     return ( 
         <div>
