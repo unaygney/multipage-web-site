@@ -1,0 +1,49 @@
+.container {
+  &.destination {
+    .left-side {
+      img {
+        width: 445px;
+        height: 445px;
+        margin-top: 50px;
+      }
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      max-width: 445px;
+
+      nav {
+        margin-bottom: 37px;
+        a {
+          &:not(:last-child) {
+            margin-right: 35px;
+          }
+        }
+      }
+
+      h2{
+        margin-bottom: 14px;
+      }
+
+      .line{
+        width: 100%;
+        height: 1px;
+        background-color: rgba(56, 59, 75, 1);
+        margin-top: 54px;
+
+      }
+
+      .info{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 28px;
+          .subheading-2{
+            text-transform: uppercase;
+          }
+      }
+    }
+  }
+}

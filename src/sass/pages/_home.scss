@@ -1,26 +1,9 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-  height: 70%;
-  width: 80%;
-  margin-top: auto;
- align-items: center;
- border: 1px solid white;
-  
-
-  .left-side {
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.container{
+  .right-side{
+    justify-content: flex-end;
   }
-
-  .right-side {
-    display: flex;
-    align-items: flex-start;
- 
-
-
+}    
+    
     .big-circle {
       width: 274px;
       height: 274px;
@@ -41,5 +24,4 @@
         letter-spacing: 2px;
       }
     }
-  }
-}
+

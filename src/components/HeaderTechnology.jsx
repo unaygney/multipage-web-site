@@ -6,7 +6,12 @@ function HeaderTechnology() {
     const {sharedData , activePage} = useContext(MyContext)
     return ( 
         <header className={`header ${activePage.replace('/', '')}`}>
-  <div className="container"></div>
+ <div className="container">
+        <div className="left-side">
+        <h3 className="subheading-1" id="title">SPACE LAUNCH 101</h3>
+        </div>
+        <div className="right-side"></div>
+      </div>
 
         </header>
      );

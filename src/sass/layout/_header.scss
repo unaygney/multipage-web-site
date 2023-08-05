@@ -9,7 +9,8 @@
     z-index: -1;
     background-image: url(./assets/home/background-home-desktop.jpg);
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     // ./assets/destination/background-home-desktop
     &.destination{
@@ -23,4 +24,6 @@
     &.technology{
         background-image: url(./assets/technology/background-technology-desktop.jpg);
     }
+
+
 }

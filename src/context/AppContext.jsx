@@ -20,10 +20,20 @@ const AppContextProvider = ({ children }) => {
   useEffect(() => {
     getData().then((response) => setSharedData(response));
   }, []);
+
+  function removeLeadingSlash(text) {
+    if (text.startsWith('/')) {
+      return text.slice(1);
+      console.log(text)
+
+    }
+    return text;
+    console.log(text)
+  }
   
 
     return (
-      <MyContext.Provider value={{ sharedData , activePage }}>
+      <MyContext.Provider value={{ sharedData , activePage , removeLeadingSlash }}>
         {children}
       </MyContext.Provider>
     );

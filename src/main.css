@@ -1,6 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 70%;
+  width: 80%;
+  margin-top: auto;
+  align-items: center; }
+  .container .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    height: 100%; }
+  .container .right-side {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    height: 100%; }
+
 .heading-1 {
   color: #fff;
   font-family: Bellefair;
@@ -44,7 +63,7 @@
   line-height: normal;
   letter-spacing: 4.725px; }
 
-.supheading-1 {
+.subheading-1 {
   color: #fff;
   font-family: Bellefair;
   font-size: 28px;
@@ -61,6 +80,15 @@
   font-weight: 400;
   line-height: 32px; }
 
+.nav-text {
+  color: #D0D6F9;
+  font-family: Barlow;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase; }
+
 .body-text {
   color: #D0D6F9;
   font-family: Barlow;
@@ -68,6 +96,15 @@
   font-style: normal;
   font-weight: 400;
   line-height: 32px; }
+
+.subheading-info {
+  color: #FFF;
+  font-family: Bellefair;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -185,7 +222,8 @@ h4 {
   z-index: -1;
   background-image: url(./assets/home/background-home-desktop.jpg);
   display: flex;
-  justify-content: center; }
+  align-items: center;
+  flex-direction: column; }
   .header.destination {
     background-image: url(./assets/destination/background-destination-desktop.jpg); }
   .header.crew {
@@ -193,36 +231,52 @@ h4 {
   .header.technology {
     background-image: url(./assets/technology/background-technology-desktop.jpg); }
 
-.container {
+.container .right-side {
+  justify-content: flex-end; }
+
+.big-circle {
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  background-color: #fff;
   display: flex;
-  justify-content: space-between;
-  height: 70%;
-  width: 80%;
-  margin-top: auto;
   align-items: center;
-  border: 1px solid white; }
-  .container .left-side {
-    width: 450px;
+  justify-content: center;
+  cursor: pointer; }
+  .big-circle span {
+    color: #0b0d17;
+    font-family: Bellefair;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px; }
+
+.container.destination .left-side img {
+  width: 445px;
+  height: 445px;
+  margin-top: 50px; }
+
+.container.destination .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 445px; }
+  .container.destination .right-side nav {
+    margin-bottom: 37px; }
+    .container.destination .right-side nav a:not(:last-child) {
+      margin-right: 35px; }
+  .container.destination .right-side h2 {
+    margin-bottom: 14px; }
+  .container.destination .right-side .line {
+    width: 100%;
+    height: 1px;
+    background-color: #383b4b;
+    margin-top: 54px; }
+  .container.destination .right-side .info {
     display: flex;
-    flex-direction: column;
-    gap: 20px; }
-  .container .right-side {
-    display: flex;
-    align-items: flex-start; }
-    .container .right-side .big-circle {
-      width: 274px;
-      height: 274px;
-      border-radius: 50%;
-      background-color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer; }
-      .container .right-side .big-circle span {
-        color: #0b0d17;
-        font-family: Bellefair;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 2px; }
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 28px; }
+    .container.destination .right-side .info .subheading-2 {
+      text-transform: uppercase; }
