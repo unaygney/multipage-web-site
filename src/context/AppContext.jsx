@@ -24,11 +24,9 @@ const AppContextProvider = ({ children }) => {
   function removeLeadingSlash(text) {
     if (text.startsWith('/')) {
       return text.slice(1);
-      console.log(text)
-
     }
     return text;
-    console.log(text)
+    
   }
   
 

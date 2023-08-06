@@ -1,15 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import moon from "../assets/destination/image-moon.png";
 
 function HeaderDestination() {
-  const { activePage ,sharedData ,removeLeadingSlash } = useContext(MyContext);
+  const { activePage, sharedData, removeLeadingSlash } = useContext(MyContext);
 
+  const [number, setNumber] = useState("0");
 
+  const handleClick = (index, event) => {
+    event.preventDefault();
+    setNumber(index);
+  };
 
-// console.log(removeLeadingSlash(activePage))
-console.log(sharedData)
+  const destSharedData = sharedData.destinations[number];
+
   return (
     <header className={`header ${activePage.replace("/", "")}`}>
       <div className="container destination">
@@ -17,39 +22,40 @@ console.log(sharedData)
           <h3 className="subheading-1" id="title">
             Pick your destination
           </h3>
-          <img src={moon} alt="moon" />
+          <img src={destSharedData.images.png} alt="moon" />
         </div>
         <div className="right-side">
           <nav>
-            <Link onClick={ (e) => {
-              e.preventDefault()
-              console.log(selam)
-            } } className="nav-text">Moon</Link>
-            <Link className="nav-text">Mars</Link>
-            <Link className="nav-text">Europa</Link>
-            <Link className="nav-text">Tıtan</Link>
+            <Link onClick={(e) => handleClick(0, e)} className="nav-text">
+              Moon
+            </Link>
+            <Link onClick={(e) => handleClick(1, e)} className="nav-text">
+              Mars
+            </Link>
+            <Link onClick={(e) => handleClick(2, e)} className="nav-text">
+              Europa
+            </Link>
+            <Link onClick={(e) => handleClick(3, e)} className="nav-text">
+              Tıtan
+            </Link>
           </nav>
-          <h2 className="heading-2">MOON</h2>
-          <p className="body-text">
-            See our planet as you’ve never seen it before. A perfect relaxing
-            trip away to help regain perspective and come back refreshed. While
-            you’re there, take in some history by visiting the Luna 2 and Apollo
-            11 landing sites.
-          </p>
+          <h2 className="heading-2">{destSharedData.name}</h2>
 
-           <span className="line"></span>
+          <p className="body-text">{destSharedData.description}</p>
 
-           <div className="info">
+          <span className="line"></span>
+
+          <div className="info">
             <div className="info-distance">
               <h5 className="subheading-2">avg. distance</h5>
-              <p className="subheading-info">384,400 KM</p>
+              <p className="subheading-info">{destSharedData.distance}</p>
             </div>
 
             <div className="info-travel-time">
-              <h5 className="subheading-2"  >est. travel time</h5>
-              <p className="subheading-info" >3 days</p>
+              <h5 className="subheading-2">est. travel time</h5>
+              <p className="subheading-info">{destSharedData.travel}</p>
             </div>
-           </div>
+          </div>
         </div>
       </div>
     </header>

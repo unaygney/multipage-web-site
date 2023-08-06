@@ -4,9 +4,9 @@ import Douglas from '../assets/crew/image-douglas-hurley.png'
 
 function HeaderCrew() {
 
-    const {sharedData , activePage} = useContext(MyContext)
+    const {sharedData , activePage , removeLeadingSlash} = useContext(MyContext)
 
-    console.log(sharedData.crew[0].images.png)
+    console.log(removeLeadingSlash(activePage))
 
     return ( 
         <header className={`header ${activePage.replace('/', '')}`}>

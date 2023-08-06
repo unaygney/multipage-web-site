@@ -3,7 +3,9 @@ import { MyContext } from "../context/AppContext";
 
 function HeaderTechnology() {
 
-    const {sharedData , activePage} = useContext(MyContext)
+    const {sharedData , activePage , removeLeadingSlash} = useContext(MyContext)
+
+    console.log(removeLeadingSlash(activePage))
     return ( 
         <header className={`header ${activePage.replace('/', '')}`}>
  <div className="container">
