@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
-import moon from "../assets/destination/image-moon.png";
+
 
 function HeaderDestination() {
-  const { activePage, sharedData, removeLeadingSlash } = useContext(MyContext);
+  const { activePage, sharedData } = useContext(MyContext);
 
   const [number, setNumber] = useState("0");
 

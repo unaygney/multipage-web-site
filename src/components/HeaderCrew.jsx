@@ -1,28 +1,70 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
-import Douglas from '../assets/crew/image-douglas-hurley.png'
+import { Link } from "react-router-dom";
 
 function HeaderCrew() {
+  const { sharedData, activePage } = useContext(MyContext);
+  const [crewNumber, setCrewNumber] = useState("0");
 
-    const {sharedData , activePage , removeLeadingSlash} = useContext(MyContext)
+  const [isLoading, setIsLoading] = useState(true);
+  const sharedCrewData = sharedData.crew[crewNumber];
 
-    console.log(removeLeadingSlash(activePage))
+  const handleClick = (index, event) => {
+    event.preventDefault();
+    setCrewNumber(index);
+  };
 
-    return ( 
-        <header className={`header ${activePage.replace('/', '')}`}>
-            <div className="container">
+  useEffect(() => {
+
+    if (sharedData.crew.length > 0) {
+      setIsLoading(false);
+    }
+  }, [sharedData.crew]);
+
+  console.log(sharedCrewData.role);
+
+  return (
+    <header className={`header ${activePage.replace("/", "")}`}>
+      <div className="container">
         <div className="left-side">
-        <h3 className="subheading-1" id="title">Meet your crew</h3>
-        <p>merhaba ben </p>
-        <p>{sharedData.crew[0].name}</p>
+          <h3 className="subheading-1" id="title">
+            Meet your crew
+          </h3>
+          <h3 className="heading-4">{sharedCrewData.role}</h3>
+          <h5 className="heading-3">{sharedCrewData.name}</h5>
+          <p className="body-text">
+        {sharedCrewData.bio}
+          </p>
+          <nav>
+            <Link
+              onClick={(e) => handleClick(0, e)}
+              className={`nav-text ${crewNumber === 0 ? "active" : ""}`}
+              to="#"
+            ></Link>
+            <Link
+              onClick={(e) => handleClick(1, e)}
+              className={`nav-text ${crewNumber === 1 ? "active" : ""}`}
+              to="#"
+            ></Link>
+            <Link
+              onClick={(e) => handleClick(2, e)}
+              className={`nav-text ${crewNumber === 2 ? "active" : ""}`}
+              to="#"
+            ></Link>
+            <Link
+              onClick={(e) => handleClick(3, e)}
+              className={`nav-text ${crewNumber === 3 ? "active" : ""}`}
+              to="#"
+            ></Link>
+          </nav>
         </div>
+
         <div className="right-side">
-            <img src={Douglas} alt="" />
+          <img src={sharedCrewData.images.png} alt="" />
         </div>
       </div>
-        
-        </header>
-     );
+    </header>
+  );
 }
 
 export default HeaderCrew;

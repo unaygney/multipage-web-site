@@ -14,6 +14,7 @@ const AppContextProvider = ({ children }) => {
 
   useEffect(() => {
     setActivePage(location.pathname);
+   
   }, [location]);
 
 

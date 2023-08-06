@@ -1,0 +1,40 @@
+.container {
+    .left-side{
+       .subheading-1{
+        margin-bottom: 40px;
+       } 
+       .body-text{
+        width: 444px;
+       }
+       
+      h3{
+        &.heading-4{
+            opacity: 0.5042; 
+            margin-bottom: 10px;
+        }
+
+       }
+
+       h5{
+        margin-bottom: 27px;
+       }
+
+       nav{
+        a{
+            margin-top: 30px;
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+            &.active{
+                background-color: white;
+            }
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #979797;
+
+        }
+       }
+    }
+}

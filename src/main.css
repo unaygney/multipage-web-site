@@ -281,3 +281,28 @@ h4 {
     margin-top: 28px; }
     .container.destination .right-side .info .subheading-2 {
       text-transform: uppercase; }
+
+.container .left-side .subheading-1 {
+  margin-bottom: 40px; }
+
+.container .left-side .body-text {
+  width: 444px; }
+
+.container .left-side h3.heading-4 {
+  opacity: 0.5042;
+  margin-bottom: 10px; }
+
+.container .left-side h5 {
+  margin-bottom: 27px; }
+
+.container .left-side nav a {
+  margin-top: 30px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #979797; }
+  .container .left-side nav a:not(:last-child) {
+    margin-right: 15px; }
+  .container .left-side nav a.active {
+    background-color: white; }
