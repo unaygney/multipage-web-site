@@ -6,7 +6,6 @@ function HeaderCrew() {
   const { sharedData, activePage } = useContext(MyContext);
   const [crewNumber, setCrewNumber] = useState("0");
 
-  const [isLoading, setIsLoading] = useState(true);
   const sharedCrewData = sharedData.crew[crewNumber];
 
   const handleClick = (index, event) => {
@@ -14,14 +13,7 @@ function HeaderCrew() {
     setCrewNumber(index);
   };
 
-  useEffect(() => {
 
-    if (sharedData.crew.length > 0) {
-      setIsLoading(false);
-    }
-  }, [sharedData.crew]);
-
-  console.log(sharedCrewData.role);
 
   return (
     <header className={`header ${activePage.replace("/", "")}`}>
