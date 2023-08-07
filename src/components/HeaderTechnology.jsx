@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 
@@ -12,12 +12,37 @@ function HeaderTechnology() {
     setNumber(index);
   };
 
-const sharedDataTech = sharedData.technology[number]
+  useEffect(() => {
+    setNumber(0);
+  }, []);
 
-console.log(sharedDataTech.images)
+  const sharedDataTech = sharedData.technology[number];
+
+
+  // deneme
+
+  const [isPortrait, setIsPortrait] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPortrait(window.innerWidth <= 768);
+    };
+
+    // Pencere boyutu değiştiğinde handleResize fonksiyonunu çağırarak isPortrait durumunu güncelle
+    window.addEventListener('resize', handleResize);
+
+    // Komponentin kaldırılması durumunda event listener'ı temizle
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  const imageSrc = isPortrait
+  ? sharedDataTech.images.landscape
+  : sharedDataTech.images.portrait;
+  
   return (
     <header className={`header ${activePage.replace("/", "")}`}>
-      <div className="container">
+      <div className="container tech">
         <div className="left-side">
           <h3 className="subheading-1" id="title">
             SPACE LAUNCH 101
@@ -48,14 +73,12 @@ console.log(sharedDataTech.images)
             <div className="content-side">
               <h4>THE TERMINOLOGY…</h4>
               <h3 className="heading-3">{sharedDataTech.name}</h3>
-              <p className="body-text">
-              {sharedDataTech.description}
-              </p>
+              <p className="body-text">{sharedDataTech.description}</p>
             </div>
           </div>
         </div>
         <div className="right-side">
-          <img src={sharedDataTech.images.portrait} alt="" />
+          <img src={imageSrc} alt="" />
         </div>
       </div>
     </header>

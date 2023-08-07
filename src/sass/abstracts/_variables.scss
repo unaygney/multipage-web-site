@@ -123,3 +123,17 @@ font-weight: 400;
 line-height: normal;
 text-transform: uppercase;
 }
+
+
+@media (max-width : 768px){
+  .container{
+    flex-direction: column;
+    margin-top: 120px;
+
+    .left-side{
+      align-items: center;
+      text-align: center;
+
+    }
+  }
+}

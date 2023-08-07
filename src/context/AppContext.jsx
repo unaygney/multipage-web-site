@@ -32,7 +32,7 @@ const AppContextProvider = ({ children }) => {
   
 
     return (
-      <MyContext.Provider value={{ sharedData , activePage , removeLeadingSlash }}>
+      <MyContext.Provider value={{ sharedData , activePage ,  }}>
         {children}
       </MyContext.Provider>
     );

@@ -38,3 +38,27 @@
        }
     }
 }
+
+@media (max-width : 768px) {
+    .container{
+
+        &.crew{
+            .left-side{
+                width: 100%;
+                .subheading-1{
+                    margin-right: auto;
+                    margin-top: 20px;
+                    font-size: 20px;
+                }
+            }
+
+            .right-side{
+
+                img{
+                    margin-top: 50px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

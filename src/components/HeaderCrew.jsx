@@ -1,12 +1,25 @@
 import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
+import getData from "../context/FetchApi";
+
 
 function HeaderCrew() {
   const { sharedData, activePage } = useContext(MyContext);
   const [crewNumber, setCrewNumber] = useState("0");
 
   const sharedCrewData = sharedData.crew[crewNumber];
+  
+ useEffect(() => {
+  sharedCrewData
+ }, [])
+
+
+
+  useEffect(() => {
+    setCrewNumber(0)
+  } , [])
+
 
   const handleClick = (index, event) => {
     event.preventDefault();
@@ -15,9 +28,10 @@ function HeaderCrew() {
 
 
 
+
   return (
     <header className={`header ${activePage.replace("/", "")}`}>
-      <div className="container">
+      <div className="container crew">
         <div className="left-side">
           <h3 className="subheading-1" id="title">
             Meet your crew
@@ -60,3 +74,5 @@ function HeaderCrew() {
 }
 
 export default HeaderCrew;
+
+

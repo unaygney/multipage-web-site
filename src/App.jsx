@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes  } from "react-router-dom";
 import "./main.css";
 // Pages
 import Home from "./pages/Home";
@@ -12,11 +12,12 @@ function App() {
   return (
     <>
       <Routes>
+    
         <Route path="/" element={<Home />} />
         <Route path="/destination" element={<Destination />} />
         <Route path="/crew" element={<Crew />} />
         <Route path="/technology" element={<Technology />} />
-        <Route path="*" element={<Home />} />
+   
       </Routes>
     </>
   );

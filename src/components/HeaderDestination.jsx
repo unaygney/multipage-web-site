@@ -1,7 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext, useState , useEffect} from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
-
 
 function HeaderDestination() {
   const { activePage, sharedData } = useContext(MyContext);
@@ -12,6 +11,9 @@ function HeaderDestination() {
     event.preventDefault();
     setNumber(index);
   };
+  useEffect(() => {
+    setNumber(0);
+  }, []);
 
   const destSharedData = sharedData.destinations[number];
 
@@ -26,17 +28,33 @@ function HeaderDestination() {
         </div>
         <div className="right-side">
           <nav>
-            <Link onClick={(e) => handleClick(0, e)} className="nav-text">
+            <Link
+              to="#"
+              onClick={(e) => handleClick(0, e)}
+              className={`nav-text ${number === 0 ? "active" : ""}`}
+            >
               Moon
             </Link>
-            <Link onClick={(e) => handleClick(1, e)} className="nav-text">
+            <Link
+              to="#"
+              onClick={(e) => handleClick(1, e)}
+              className={`nav-text ${number === 1 ? "active" : ""}`}
+            >
               Mars
             </Link>
-            <Link onClick={(e) => handleClick(2, e)} className="nav-text">
+            <Link
+              to="#"
+              onClick={(e) => handleClick(2, e)}
+              className={`nav-text ${number === 2 ? "active" : ""}`}
+            >
               Europa
             </Link>
-            <Link onClick={(e) => handleClick(3, e)} className="nav-text">
-              Tıtan
+            <Link
+              to="#"
+              onClick={(e) => handleClick(3, e)}
+              className={`nav-text ${number === 3 ? "active" : ""}`}
+            >
+              Titan
             </Link>
           </nav>
           <h2 className="heading-2">{destSharedData.name}</h2>
