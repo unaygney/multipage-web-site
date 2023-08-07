@@ -27,7 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop-1](./screenshots/desktop-1.png)
+![Desktop-2](./screenshots/desktop-2.png)
+![Tablet-1](./screenshots/tablet-1.png)
+![Tablet-2](./screenshots/tablet-2.png)
+![Mobile-1](./screenshots/mobile-1.png)
+![Mobile-2](./screenshots/mobile-2.png)
 
 
 
@@ -52,13 +57,13 @@ Users should be able to:
 
 ### What I learned
 
-When i worked on this project, i learned a lot of stuff. First, I understood the importance of avoiding code duplication and using common classes.You used the react dom while coding the project.Making mobile and tablet versions also made it difficult for me in terms of design, I know the project has a few shortcomings, but it was an instructive challenge that I really enjoyed doing. See you in the next challenges. Additionally I used an effective sass pattern structure, and it was very useful for me to use it
+When i worked on this project, i learned a lot of stuff. First, I understood the importance of avoiding code duplication and using common classes.You used the react dom while coding the project.Making mobile and tablet versions also made it difficult for me in terms of design, I know the project has a few shortcomings, but it was an instructive challenge that I really enjoyed doing.Additionally I used an effective sass pattern structure, and it was very useful for me to use it..See you in the next challenges.
 
 
 
 ## Author
 
-- Website - [Add your name here](https://www.guneyunay.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/unaygney)
+- Website - [Guney Unay](https://www.guneyunay.com)
+- Frontend Mentor - [@unaygney](https://www.frontendmentor.io/profile/unaygney)
 
 
