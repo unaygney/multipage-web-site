@@ -6,6 +6,8 @@ function HeaderHome() {
 
   const {sharedData , activePage} = useContext(MyContext)
 
+  
+
     return ( 
         <header className={`header ${activePage.replace('/', '')}`}>
             <div className="container home">
