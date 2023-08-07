@@ -5,7 +5,11 @@
   justify-content: space-between;
   align-items: center;
   margin-left: 55px;
-  position: relative;
+ position: relative;
+
+  .burger{
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -27,10 +31,14 @@
     height: 100%;
     width: 830px;
 
+    .btn-close{
+      display: none;
+    }
+
     li {
+
       
       height: 100%;
-
       &:not(:last-child){
         margin-right: 50px;
         
@@ -55,8 +63,6 @@
 
         &:hover:not(.active)  {
           border-bottom: 3px solid rgba(255, 255, 255, .5);
- 
-
         }
 
         .bold-text {
@@ -92,6 +98,7 @@ margin-right: 5px;
   .links{
     width: 450px;
 
+
     li{
       &:not(:last-child){
         margin-right: 37px;
@@ -106,6 +113,88 @@ margin-right: 5px;
 
   .bold-text{
     display: none;
+  }
+}
+}
+
+@media (max-width : 478px) {
+
+.navbar{
+
+  .burger{
+    display: block;
+    width: 30px;
+    height: 21px;
+    margin-right: 20px;
+
+    .btn-burger{
+      background-color: transparent;
+      cursor: pointer;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+
+
+  .links{
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 254px;
+    height: 667px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    &.open {
+
+      
+        right: -10px;
+      
+    }
+
+    .btn-close{
+      display: block;
+      background-color: transparent;
+      margin-bottom: 64px;
+      margin-left: auto;
+      padding: 34px 26px;
+      
+    }
+
+    li{
+      height: 20px;
+      width: 100%;
+      margin-bottom: 32px;
+      
+      &:not(:last-child){
+        margin-right: 0;
+        
+      }
+
+      a{
+        &.active{
+          border-bottom:0;
+        }
+
+        &:hover:not(.active)  {
+          border-bottom: 0;
+        }
+
+        .bold-text{
+          display: block;
+          margin-left: 32px;
+
+        
+        }
+      }
+    }
   }
 }
 }

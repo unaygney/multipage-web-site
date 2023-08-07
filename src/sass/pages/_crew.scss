@@ -62,3 +62,38 @@
         }
     }
 }
+
+@media (max-width: 478px) {
+    .container {
+      &.crew {
+        .left-side {
+          order: 2;
+         
+          .subheading-1{
+            margin-right: 0;
+
+          }
+          .heading-4{
+            font-size: 16px;
+          }
+          .heading-3{
+            font-size: 24px;
+          }
+
+          .body-text{
+            width: 327px;
+          }
+  
+        }
+        .right-side {
+            order: 1;
+            justify-content: center;
+            border-bottom: 1px solid #383B4B;;
+            
+        }
+      }
+    }
+  
+
+}
+  

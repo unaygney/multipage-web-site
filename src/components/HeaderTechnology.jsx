@@ -28,7 +28,6 @@ function HeaderTechnology() {
       setIsPortrait(window.innerWidth <= 768);
     };
 
-    // Pencere boyutu değiştiğinde handleResize fonksiyonunu çağırarak isPortrait durumunu güncelle
     window.addEventListener('resize', handleResize);
 
     // Komponentin kaldırılması durumunda event listener'ı temizle

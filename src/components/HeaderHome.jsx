@@ -8,7 +8,7 @@ function HeaderHome() {
 
     return ( 
         <header className={`header ${activePage.replace('/', '')}`}>
-            <div className="container">
+            <div className="container home">
             <div className="left-side">
                    <h5 className='heading-5'>SO, YOU WANT TO TRAVEL TO</h5>
                    <h1 className='heading-1'>SPACE</h1>

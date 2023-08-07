@@ -27,8 +27,8 @@
             border-bottom: 3px solid $color-white;
           }
 
-          &:hover:not(.active){
-            border-bottom: 3px solid rgba(255, 255, 255, .5);
+          &:hover:not(.active) {
+            border-bottom: 3px solid rgba(255, 255, 255, 0.5);
           }
         }
       }
@@ -57,29 +57,60 @@
   }
 }
 
-
-@media (max-width : 768px) {
-  .container{
+@media (max-width: 768px) {
+  .container {
     &.destination {
-      .left-side{
+      .left-side {
         width: 100%;
 
-        h3{
-          margin-right:auto ;
+        h3 {
+          margin-right: auto;
           margin-top: 20px;
           font-size: 20px;
         }
 
-        img{
+        img {
           width: 300px;
           height: 300px;
           margin-bottom: 40px;
         }
       }
 
-      .right-side{
+      .right-side {
         align-items: center;
         text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 478px) {
+  .container {
+    &.destination {
+      .left-side {
+        .subheading-1 {
+          margin-right: 0;
+          margin-bottom: 0;
+        }
+
+        img {
+          margin: 20px;
+        }
+      }
+      .right-side {
+        .heading-2 {
+          font-size: 56px;
+
+        }
+          .body-text{
+            width: 327px;
+          
+          }
+
+          .info{
+            flex-direction: column;
+            gap: 32px;
+          }
       }
     }
   }

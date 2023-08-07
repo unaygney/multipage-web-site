@@ -31,18 +31,54 @@
   .container {
 
     .left-side{
+      gap: 10px;
       .heading-5{
         margin-top: 30px;
       }
     }
 
     .right-side {
-      justify-content: center;
+      align-items: flex-start;
+     
 
       .big-circle {
         margin-top: 50px;
         width: 242px;
         height: 242px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container{
+   
+    &.home{
+      .left-side{
+      
+        width: 80%;
+        .heading-5{
+          font-size: 16px;
+          margin-bottom: 16px;
+  
+        }
+        .heading-1{
+          font-size: 80px;
+          margin-bottom: 16px;
+        }
+
+        .body-text{
+          font-size: 16px;
+          width: 327px;
+        }
+      }
+
+      .right-side{
+        .big-circle{
+          margin-top: 0;
+        
+        }
       }
     }
   }
