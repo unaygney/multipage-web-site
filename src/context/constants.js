@@ -1,3 +1,4 @@
+export const data = 
 {
   "destinations": [
     {

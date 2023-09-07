@@ -1,20 +1,16 @@
 import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
-import getData from "../context/FetchApi";
+import { data } from "../context/constants";
 
 
 function HeaderCrew() {
   const { sharedData, activePage } = useContext(MyContext);
   const [crewNumber, setCrewNumber] = useState("0");
 
-  const sharedCrewData = sharedData.crew[crewNumber];
+
   
- useEffect(() => {
-  sharedCrewData
- }, [])
-
-
+const dataCrew = data.crew[crewNumber]
 
   useEffect(() => {
     setCrewNumber(0)
@@ -36,10 +32,10 @@ function HeaderCrew() {
           <h3 className="subheading-1" id="title">
             Meet your crew
           </h3>
-          <h3 className="heading-4">{sharedCrewData.role}</h3>
-          <h5 className="heading-3">{sharedCrewData.name}</h5>
+          <h3 className="heading-4">{dataCrew?.role}</h3>
+          <h5 className="heading-3">{dataCrew?.name}</h5>
           <p className="body-text">
-        {sharedCrewData.bio}
+        {dataCrew?.bio}
           </p>
           <nav>
             <Link
@@ -66,7 +62,7 @@ function HeaderCrew() {
         </div>
 
         <div className="right-side">
-          <img src={sharedCrewData.images.png} alt="" />
+          <img src={dataCrew?.images?.png} alt="" />
         </div>
       </div>
     </header>

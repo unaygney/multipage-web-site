@@ -1,9 +1,10 @@
-import { useContext, useState , useEffect} from "react";
+import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
+import { data } from "../context/constants";
 
 function HeaderDestination() {
-  const { activePage, sharedData } = useContext(MyContext);
+  const { activePage } = useContext(MyContext);
 
   const [number, setNumber] = useState("0");
 
@@ -15,7 +16,7 @@ function HeaderDestination() {
     setNumber(0);
   }, []);
 
-  const destSharedData = sharedData.destinations[number];
+  const destData = data.destinations[number];
 
   return (
     <header className={`header ${activePage.replace("/", "")}`}>
@@ -24,7 +25,7 @@ function HeaderDestination() {
           <h3 className="subheading-1" id="title">
             Pick your destination
           </h3>
-          <img src={destSharedData.images.png} alt="moon" />
+          <img src={destData.images.png} alt="moon" />
         </div>
         <div className="right-side">
           <nav>
@@ -57,21 +58,21 @@ function HeaderDestination() {
               Titan
             </Link>
           </nav>
-          <h2 className="heading-2">{destSharedData.name}</h2>
+          <h2 className="heading-2">{destData?.name}</h2>
 
-          <p className="body-text">{destSharedData.description}</p>
+          <p className="body-text">{destData?.description}</p>
 
           <span className="line"></span>
 
           <div className="info">
             <div className="info-distance">
               <h5 className="subheading-2">avg. distance</h5>
-              <p className="subheading-info">{destSharedData.distance}</p>
+              <p className="subheading-info">{destData?.distance}</p>
             </div>
 
             <div className="info-travel-time">
               <h5 className="subheading-2">est. travel time</h5>
-              <p className="subheading-info">{destSharedData.travel}</p>
+              <p className="subheading-info">{destData?.travel}</p>
             </div>
           </div>
         </div>

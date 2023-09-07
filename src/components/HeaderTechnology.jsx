@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
+import { data } from "../context/constants";
 
 function HeaderTechnology() {
   const { sharedData, activePage } = useContext(MyContext);
@@ -16,11 +17,7 @@ function HeaderTechnology() {
     setNumber(0);
   }, []);
 
-  const sharedDataTech = sharedData.technology[number];
-
-
-  // deneme
-
+  const dataTech = data.technology[number]
   const [isPortrait, setIsPortrait] = useState(true);
 
   useEffect(() => {
@@ -28,17 +25,17 @@ function HeaderTechnology() {
       setIsPortrait(window.innerWidth <= 768);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Komponentin kaldırılması durumunda event listener'ı temizle
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   const imageSrc = isPortrait
-  ? sharedDataTech.images.landscape
-  : sharedDataTech.images.portrait;
-  
+    ? dataTech?.images?.landscape
+    : dataTech?.images?.portrait;
+
   return (
     <header className={`header ${activePage.replace("/", "")}`}>
       <div className="container tech">
@@ -71,8 +68,8 @@ function HeaderTechnology() {
 
             <div className="content-side">
               <h4>THE TERMINOLOGY…</h4>
-              <h3 className="heading-3">{sharedDataTech.name}</h3>
-              <p className="body-text">{sharedDataTech.description}</p>
+              <h3 className="heading-3">{dataTech?.name}</h3>
+              <p className="body-text">{dataTech?.description}</p>
             </div>
           </div>
         </div>

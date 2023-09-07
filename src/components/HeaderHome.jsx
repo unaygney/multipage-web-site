@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { MyContext  } from '../context/AppContext';
-
+import { data } from '../context/constants';
 
 function HeaderHome() {
 
-  const {sharedData , activePage} = useContext(MyContext)
+  const { activePage} = useContext(MyContext)
 
+  console.log(data.crew[0])
   
 
     return ( 
