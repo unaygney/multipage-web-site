@@ -6,6 +6,7 @@
   align-items: center;
   margin-left: 55px;
  position: relative;
+ z-index: 1;
 
   .burger{
     display: none;
@@ -19,7 +20,7 @@
     position: absolute;
     left: 217px;
     top: 48px;
-    z-index: 2;
+
   }
 
   .links {

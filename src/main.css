@@ -186,7 +186,8 @@ h4 {
   justify-content: space-between;
   align-items: center;
   margin-left: 55px;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   .navbar .burger {
     display: none; }
   .navbar::before {
@@ -196,8 +197,7 @@ h4 {
     background-color: #fff;
     position: absolute;
     left: 217px;
-    top: 48px;
-    z-index: 2; }
+    top: 48px; }
   .navbar .links {
     display: flex;
     align-items: center;
@@ -310,7 +310,6 @@ h4 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
   background-image: url(./assets/home/background-home-desktop.jpg);
   display: flex;
   align-items: center;
