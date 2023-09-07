@@ -168,6 +168,11 @@ img {
 .clear {
   clear: both; }
 
+html, body {
+  width: 100%;
+  overflow: hidden;
+  height: 100%; }
+
 h1,
 h2,
 h3,
