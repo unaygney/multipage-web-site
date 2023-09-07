@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/space-tourism-multipage-website-jdX0LBybqe)
-- Live Site URL: [Add live site URL here](https://effulgent-puffpuff-412349.netlify.app/)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/space-tourism-multipage-website-jdX0LBybqe)
+- Live Site URL: [ Live site URL here](https://64fa21639f05cd420b5cfdaf--warm-taiyaki-d3d822.netlify.app/)
 
 ## My process
 
