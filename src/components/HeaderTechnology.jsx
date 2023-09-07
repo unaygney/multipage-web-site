@@ -2,11 +2,20 @@ import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import { data } from "../context/constants";
+//Images
+import Vehicle from '../assets/technology/image-launch-vehicle-portrait.jpg'
+import Capsule from '../assets/technology/image-space-capsule-portrait.jpg'
+import Spaceport from '../assets/technology/image-spaceport-portrait.jpg'
 
 function HeaderTechnology() {
-  const { sharedData, activePage } = useContext(MyContext);
-
+  const { activePage } = useContext(MyContext);
   const [number, setNumber] = useState("0");
+  const TechImages = {
+    0 : Vehicle,
+    1 : Capsule,
+    2 : Spaceport
+
+  }
 
   const handleClick = (index, event) => {
     event.preventDefault();
@@ -24,10 +33,7 @@ function HeaderTechnology() {
     const handleResize = () => {
       setIsPortrait(window.innerWidth <= 768);
     };
-
     window.addEventListener("resize", handleResize);
-
-    // Komponentin kaldırılması durumunda event listener'ı temizle
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -74,7 +80,7 @@ function HeaderTechnology() {
           </div>
         </div>
         <div className="right-side">
-          <img src={imageSrc} alt="" />
+          <img src={TechImages[number]} alt="" />
         </div>
       </div>
     </header>

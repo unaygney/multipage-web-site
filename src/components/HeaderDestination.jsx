@@ -2,11 +2,29 @@ import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import { data } from "../context/constants";
+import Moon from '../assets/destination/image-moon.png'
+import Mars from '../assets/destination/image-mars.png'
+import Europa from '../assets/destination/image-europa.png'
+import Titan from '../assets/destination/image-titan.png'
+
+
+
+
 
 function HeaderDestination() {
   const { activePage } = useContext(MyContext);
 
   const [number, setNumber] = useState("0");
+
+  const DestImages = {
+    0 : Moon,
+    1 : Mars,
+    2 : Europa,
+    3 : Titan
+  }
+
+
+
 
   const handleClick = (index, event) => {
     event.preventDefault();
@@ -15,6 +33,8 @@ function HeaderDestination() {
   useEffect(() => {
     setNumber(0);
   }, []);
+
+
 
   const destData = data.destinations[number];
 
@@ -25,7 +45,7 @@ function HeaderDestination() {
           <h3 className="subheading-1" id="title">
             Pick your destination
           </h3>
-          <img src={destData.images.png} alt="moon" />
+          <img src={DestImages[number]} alt="moon" />
         </div>
         <div className="right-side">
           <nav>

@@ -2,11 +2,22 @@ import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import { data } from "../context/constants";
-
+//Images
+import Douglas from '../assets/crew/image-douglas-hurley.png'
+import Mark from '../assets/crew/image-mark-shuttleworth.png'
+import Anousheh from '../assets/crew/image-anousheh-ansari.png'
+import Victor from '../assets/crew/image-victor-glover.png'
 
 function HeaderCrew() {
-  const { sharedData, activePage } = useContext(MyContext);
+  const {  activePage } = useContext(MyContext);
   const [crewNumber, setCrewNumber] = useState("0");
+
+  const CrewImages = {
+    0 :  Douglas,
+    1 : Mark ,
+    2 : Victor,
+    3 : Anousheh ,
+  }
 
 
   
@@ -62,7 +73,7 @@ const dataCrew = data.crew[crewNumber]
         </div>
 
         <div className="right-side">
-          <img src={dataCrew?.images?.png} alt="" />
+          <img src={CrewImages[crewNumber]} alt="" />
         </div>
       </div>
     </header>
