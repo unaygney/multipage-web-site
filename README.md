@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/space-tourism-multipage-website-jdX0LBybqe)
-- Live Site URL: [ Live site URL here](https://64fa236a615ca944035efd7c--guileless-dodol-05f653.netlify.app/)
+- Live Site URL: [ Live site URL here](https://64fa25238077c7444028fe3a--fancy-florentine-32647d.netlify.app/)
 
 ## My process
 
